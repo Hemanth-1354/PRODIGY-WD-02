@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch & Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Stopwatch & Timer</h1>
+        <div class="stopwatch">
+            <div class="display" id="display">00:00:00:00</div>
+            <div class="controls">
+                <button id="start" onclick="startStopwatch()">Start</button>
+                <button id="pause" onclick="togglePauseResumeStopwatch()">Pause</button>
+                <button id="resume" onclick="togglePauseResumeStopwatch()" style="display: none;">Resume</button>
+                <button id="reset" onclick="resetStopwatch()">Reset</button>
+                <button id="lap" onclick="recordLap()">Lap</button>
+            </div>
+            <div class="laps" id="laps"></div>
+        </div>
+        <div class="timer">
+            <h2>Countdown Timer</h2>
+            <label>Hours:</label>
+            <input type="number" id="hoursInput" min="0" placeholder="HH">
+            <label>Minutes:</label>
+            <input type="number" id="minutesInput" min="0" placeholder="MM">
+            <label>Seconds:</label>
+            <input type="number" id="secondsInput" min="0" placeholder="SS">
+            <div class="controls">
+                <button id="startTimer" onclick="startCountdown()">Start Timer</button>
+                <button id="pauseTimer" onclick="pauseCountdown()">Pause Timer</button>
+                <button id="resumeTimer" onclick="resumeCountdown()" style="display: none;">Resume Timer</button>
+                <button id="stopTimer" onclick="stopCountdown()">Stop Timer</button>
+            </div>
+            <div id="timerDisplay">00:00:00:00</div>
+            <audio id="alarmSound" src="alarm.mp3"></audio>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
